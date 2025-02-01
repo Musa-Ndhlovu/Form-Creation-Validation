@@ -1,1 +1,3 @@
-addEventListner(funtcion ('click', function(mouseover))) 
+document.addEventListnener("DOMContentLoaded", function (){
+
+});
