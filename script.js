@@ -1,1 +1,1 @@
-DOMContentLoaded.addEventListner(funtcion (click)) 
+addEventListner(funtcion ('click', function(mouseover))) 
