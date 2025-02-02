@@ -118,53 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // username validation
-document.addEventListener("DOMContentLoaded", function () {
-    const feedbackDiv = document.getElementById("form-feedback");
-    const form = document.getElementById("your-form-id");
-    
+username.length = < 3
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        
 
-        
-        let isValid = true; 
-        let messages = []; 
-
-        
-        const username = document.getElementById("username").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
-
-        
-        if (!username) {
-            messages.push("Username is required.");
-            isValid = false;
-        } else if (username.length < 3) { 
-            messages.push("Username must be at least 3 characters long.");
-            isValid = false;
-        }
-
-        if (!email) {
-            messages.push("Email is required.");
-            isValid = false;
-        }
-
-        if (!password) {
-            messages.push("Password is required.");
-            isValid = false;
-        }
-
-        
-        feedbackDiv.style.display = "block";
-
-        
-        if (isValid) {
-            feedbackDiv.textContent = "Registration successful!";
-            feedbackDiv.style.color = "#28a745"; 
-        } else {
-            feedbackDiv.innerHTML = messages.join("<br>"); 
-            feedbackDiv.style.color = "#dc3545";
-        }
-    });
-});
