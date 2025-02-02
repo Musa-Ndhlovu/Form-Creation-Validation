@@ -1,3 +1,4 @@
+//steup and initial code struture
 document.addEventListener("DOMContentLoaded", function (){
 
 });
@@ -9,3 +10,6 @@ const form = "registration-form"
 document.addEventListener("DOMContentLoaded", function(){
     const feedbackDiv = document.ElementById("form-feedback");
  })
+
+ //form submission and event prevention
+ document.addEventListener('click', function(submit));
