@@ -117,10 +117,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// username, password and email validation
+// username, password length validation
 username.length = < 3
 
 password.length = < 8
 
-email.length = < 6 
 
+// email validation
+
+document.addEventListener("DOMContentLoaded", function () {
+    const feedbackDiv = document.getElementById("form-feedback");
+    const form = document.getElementById("your-form-id"); 
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); 
+        
+
+        if (!email) {
+            messages.push("Email is required.");
+            isValid = false;
+        } else if (!email.includes("@") || !email.includes(".")) { 
+            messages.push("Please enter a valid email address.");
+            isValid = false;
+        }
+
+    
+      
+        feedbackDiv.style.display = "block";
+
+        
+        if (isValid) {
+            feedbackDiv.textContent = "Registration successful!";
+            feedbackDiv.style.color = "#28a745"; 
+        } else {
+            feedbackDiv.innerHTML = messages.join("<br>"); 
+            feedbackDiv.style.color = "#dc3545";
+        }
+    });
+});
