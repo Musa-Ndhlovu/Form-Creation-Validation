@@ -117,7 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// username validation
+// username, password and email validation
 username.length = < 3
 
+password.length = < 8
+
+email.length = < 6 
 
