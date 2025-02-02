@@ -18,6 +18,16 @@ document.addEventListener("DOMContentLoaded", function(){
 form.addEventListener("submit", functiion(event){
     event.preventDefault();
 
+    const username = document.getElementById("username").Value.trim();
+    const username = document.getElementById("email").Value.trim();
+    const username = document.getElementById("password").Value.trim();
+
+    if (!username || !email || !password) {
+        feedbackDiv.textContent = "All fields are required!";
+        return;
+    }
+
+
     feedbackDiv.textContent = "Form submitted successfully!"
 })
  })
