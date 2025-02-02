@@ -31,3 +31,43 @@ form.addEventListener("submit", functiion(event){
     feedbackDiv.textContent = "Form submitted successfully!"
 })
  })
+
+ //validation logic
+ document.addEventListener("DOMContentLoaded", function () {
+    const feedbackDiv = document.getElementById("form-feedback");
+    const form = document.getElementById("your-form-id"); 
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); 
+
+        
+        let isValid = true;
+        let messages = [];
+
+       
+        const username = document.getElementById("username").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        
+        if (!username) {
+            messages.push("Username is required.");
+            isValid = false;
+        }
+        if (!email) {
+            messages.push("Email is required.");
+            isValid = false;
+        }
+        if (!password) {
+            messages.push("Password is required.");
+            isValid = false;
+        }
+
+        
+        if (!isValid) {
+            feedbackDiv.textContent = messages.join(" ");
+        } else {
+            feedbackDiv.textContent = "Form submitted successfully!";
+        }
+    });
+});
