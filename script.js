@@ -12,4 +12,12 @@ document.addEventListener("DOMContentLoaded", function(){
  })
 
  //form submission and event prevention
- document.addEventListener('click', function(submit));
+ document.addEventListener("DOMContentLoaded", function() {
+    const feedbackDiv = document.getElementById("submissions");
+
+form.addEventListener("submit", functiion(event){
+    event.preventDefault();
+
+    feedbackDiv.textContent = "Form submitted successfully!"
+})
+ })
